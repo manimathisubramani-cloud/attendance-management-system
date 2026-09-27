@@ -1,0 +1,471 @@
+ * {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #111827;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+
+/* TITLE */
+
+.main-title {
+  text-align: center;
+  color: #2563eb;
+  font-size: 36px;
+  margin: 0 0 30px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto 30px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.dashboard-card h3 {
+  margin: 0 0 10px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.dashboard-card h2 {
+  margin: 0;
+  color: #2563eb;
+  font-size: 28px;
+}
+
+
+/* FORM CARD */
+
+.card {
+  width: 100%;
+  max-width: 550px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  text-align: center;
+
+  margin: 0 0 20px;
+
+  color: #1f2937;
+}
+
+
+/* INPUTS */
+
+.card input {
+  display: block;
+
+  width: 100%;
+
+  height: 44px;
+
+  margin-bottom: 12px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: white;
+
+  color: #111827;
+
+  font-size: 15px;
+}
+
+.card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+
+/* BUTTON */
+
+.calculate-button {
+  width: 100%;
+
+  height: 44px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.calculate-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* CANCEL */
+
+.cancel-button {
+  width: 100%;
+
+  height: 40px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #64748b;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* RESULT */
+
+.result {
+  margin-top: 20px;
+
+  padding: 18px;
+
+  text-align: center;
+
+  background: #eff6ff;
+
+  border-radius: 8px;
+}
+
+.result h3 {
+  margin: 0 0 8px;
+
+  color: #1e3a8a;
+}
+
+.result h1 {
+  margin: 5px 0;
+
+  color: #2563eb;
+}
+
+
+/* ATTENDANCE CONTROLS */
+
+.attendance-controls {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 30px auto 20px;
+
+  display: flex;
+
+  gap: 15px;
+}
+
+.attendance-controls input {
+  flex: 1;
+
+  height: 44px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: white;
+
+  font-size: 15px;
+}
+
+.attendance-controls input:focus {
+  outline: none;
+
+  border-color: #2563eb;
+}
+
+
+/* STUDENT LIST */
+
+.student-list {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto 35px;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.student-list h2 {
+  text-align: center;
+
+  margin: 0 0 20px;
+
+  color: #1e3a8a;
+}
+
+
+/* TABLE */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  min-width: 1200px;
+
+  border-collapse: collapse;
+}
+
+th {
+  padding: 13px 10px;
+
+  background: #1e40af;
+
+  color: white;
+
+  border: 1px solid #1e3a8a;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+td {
+  padding: 13px 10px;
+
+  background: white;
+
+  color: #111827;
+
+  border: 1px solid #d1d5db;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* DAILY ATTENDANCE */
+
+.attendance-buttons {
+  display: flex;
+
+  gap: 5px;
+
+  justify-content: center;
+}
+
+.present-button,
+.absent-button {
+  border: none;
+
+  border-radius: 5px;
+
+  padding: 7px 9px;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.present-button {
+  background: #16a34a;
+}
+
+.present-button:hover {
+  background: #15803d;
+}
+
+.absent-button {
+  background: #dc2626;
+}
+
+.absent-button:hover {
+  background: #b91c1c;
+}
+
+
+/* STATUS */
+
+.status {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+.eligible {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.not-eligible {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+.present {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.absent {
+  background: #fee2e2;
+
+  color: #991b1b;
+}
+
+
+/* ACTION */
+
+.action-cell {
+  min-width: 160px;
+
+  white-space: nowrap;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+
+  margin: 3px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.edit-button {
+  background: #2563eb;
+}
+
+.edit-button:hover {
+  background: #1d4ed8;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+
+/* EMPTY */
+
+.no-students {
+  text-align: center;
+
+  color: #64748b;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attendance-controls {
+    flex-direction: column;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .student-list {
+    padding: 12px;
+  }
+}
